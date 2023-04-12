@@ -13,6 +13,7 @@ const SearchBar = ({filteredStory, onChange}) => {
       <div>
       <input 
        style={barStyle}
+       key="search-bar"
        placeholder="search Reddit Minimal"
        onChange={onChange}
       />
