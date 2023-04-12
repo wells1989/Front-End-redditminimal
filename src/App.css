@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  background-color: #26888e;
+  background-color: ;
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 15vmin;
   pointer-events: none;
 }
 
@@ -21,11 +21,96 @@
 }
 
 .App-heading {
-  margin-top: 40px;
+  margin-top: 8px;
+  margin-right: 10px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Buttons {
+  height: 24px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: black;
+  color: white;
+  border: 1px solid #457b7e;
+  cursor: pointer;
+} 
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.Results-Titles {
+  text-align: left;
+  margin-left: 100px;
+}
+
+.Results-List {
+  list-style-type: none;
+  margin: 30px;
+}
+
+body li {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+
+.Results-List li {
+  padding: 15px;
+  border: 1px solid #457b7e;
+  width: 60%;
+}
+
+#memes{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow: scroll;
+  width: 100%;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+#memes div{
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  height: auto;
+  width: 250px;
+}
+
+#memes div h4{
+  padding: 5px;
+  text-align: center;
+  background-color: none;
+  color: white;
+  border-radius: 8px;
+  margin: 0px;
+}
+
+img{
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  transition: 200ms;
+}
+img:hover{
+  border-radius: 0px;
+  transform: scale(1.2);
 }
 
 @keyframes App-logo-spin {
