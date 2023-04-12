@@ -6,7 +6,7 @@ const SearchBar = () => (
       <input
           type="text"
           id="header-search"
-          placeholder="Search Reddit Minimal"
+          placeholder="Search Reddit Memes"
           name="s" 
       />
       <button className = "Buttons" type="submit">Search</button>
