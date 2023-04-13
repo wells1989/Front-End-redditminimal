@@ -131,16 +131,16 @@ img:hover{
 }
 
 .link-icons{
-  height:30px;
-  width:30px;
-  float: left;
-  margin-top: 10px;
+  height:30px !important;
+  width:30px !important;
+  float: left !important;
+  margin-top: 10px !important;
 }
 
 .link-icons2{
-  height:30px;
-  width:30px;
-  float: left;
+  height:30px !important;
+  width:30px !important;
+  float: left !important;
 }
 
 @keyframes App-logo-spin {

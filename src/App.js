@@ -5,6 +5,10 @@ import { useState } from "react";
 import Subreddits from './Components/subreddits';
 
 const posts = [
+  {id: 1,
+  name: example post 1}
+{id: 2,
+  name: second post}
 ];
 
 const filterPosts = (posts, query) => {
