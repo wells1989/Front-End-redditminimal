@@ -109,12 +109,24 @@ const App = () => {
       });
   }
 
-  function increaseLikes() {
-    return Object.likes + 1;
-  }
+  const [likeCount, setLikeCount] = useState(0);
+  const [dislikeCount, setDislikeCount] = useState(0);
+ 
+  const [activeBtn, setActiveBtn] = useState("none");
 
-  function decreaseLikes () {
-    
+  const handleLikeClick = () => {
+    setLikeCount(likeCount + 1);
+    setActiveBtn("like")
+  };
+
+  const handleDislikeClick = () => {
+    setDislikeCount(dislikeCount + 1);
+    setActiveBtn("dislike")
+  };
+
+  const resetLikes = () => {
+    setLikeCount(0);
+    setDislikeCount(0);
   }
 
   return (
@@ -133,17 +145,21 @@ const App = () => {
       </header>
 
       <body>
-      <h2 className = "Results-Titles">Todays Top Posts</h2>
+      <h2 className = "Results-Titles">Todays Top Posts</h2> 
+      <div className="Total-Like-Buttons">
+      <button className={`btn ${activeBtn === "like" ? "like-active" : ""}`} id="Total-Likes-Button">Total Likes: {likeCount}</button>
+      <button className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`} id="Total-Dislikes-Button">Total Dislikes: {dislikeCount}</button>
+      <button className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`} id="Reset-Button" onClick={resetLikes}>Reset likes / dislikes</button>
+      </div>
       <div>
         <ul className="Results-List">
             {filteredPosts.map((post => (
               <div className="Results-List">
               <li key={post.id}>{post.name}</li>
-              <li key={post.id}>Likes: {post.likes}</li>
-              <li className="Like-Button" key={post.id}>{post.button}</li>
-                <img className= "Like-Button-Symbol" onClick={increaseLikes} src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
-              <li className="Dislike-Button" key={post.id}>{post.button2}</li>
-                <img className= "Dislike-Button-Symbol" onClick={decreaseLikes} src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
+              <button className={`btn ${activeBtn === "like" ? "like-active" : ""}`} onClick={handleLikeClick}>Like</button>
+                <img className= "Like-Button-Symbol" src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
+              <button className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`} onClick={handleDislikeClick}>Dislike</button>
+                <img className= "Dislike-Button-Symbol" src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
               </div>
             )))}
         </ul>
