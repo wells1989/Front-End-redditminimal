@@ -156,10 +156,9 @@ const App = () => {
             {filteredPosts.map((post => (
               <div className="Results-List">
               <li key={post.id}>{post.name}</li>
-              <button className={`btn ${activeBtn === "like" ? "like-active" : ""}`} onClick={handleLikeClick}>Like</button>
-                <img className= "Like-Button-Symbol" src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
-              <button className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`} onClick={handleDislikeClick}>Dislike</button>
-                <img className= "Dislike-Button-Symbol" src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
+
+                <img className= "Like-Button-Symbol" onClick={handleLikeClick} src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
+                <img className= "Dislike-Button-Symbol" onClick={handleDislikeClick} src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
               </div>
             )))}
         </ul>

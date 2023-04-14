@@ -160,7 +160,7 @@ body li {
   background-color: white;
 }
 
-.Like-Button {
+.Like-Button-Symbol {
   background-color: green;
   height: 20px;
   vertical-align: middle;
@@ -171,14 +171,16 @@ body li {
 }
 
 .Like-Button-Symbol {
+  margin-top: 10px;
   width: 50px;
   height: 40px;
   cursor: pointer;
 }
 
-.Dislike-Button {
-  background-color: red;
-  height: 20px;
+.Dislike-Button-Symbol {
+  margin-top: 10px;
+  margin-left:10px;
+  height: 40px;
   vertical-align: middle;
   font-size: 16px;
   padding-bottom:10px;
