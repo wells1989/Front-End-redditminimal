@@ -1,3 +1,16 @@
+Project Aims: To create my first React app, using both fetch requests, rendering components via React and functionality via at least 2-3 mini-features. I spent 4 days working on it, amidst doing codecademy's front-end-development certifcation exams, so there were some features which I would have liked to spend more time on.
+
+What I liked about the final result:
+- I was able to complete my first fetch request from the Reddit API
+- The searchbar worked as expected and correctly filtered the results
+- The code was fairly clean, due to importing other components
+- The like buttons / total like buttons functionality
+- The layout was consistent
+
+Areas of improvement / issues encountered:
+- Although the searchbar worked, I was unable to link it to the API fetch request, instead opting for hard coded data. It would've been better to spend more time on attempting several reddit API requests (for the top posts and subreddits) and trying to link the searchbar feature to those fetched results
+- The like buttons were initially meant to run up a total likes / dislikes counter on each top post, however on changing one of them they all changed. If I did the project again I would try to link the like buttons to each individual fetch request (e.g. top posts, memes, subreddits) so it could work separately.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
