@@ -6,19 +6,20 @@ import Subreddits from './Components/subreddits';
 
 const posts = [
   {name: "Politics Story",
+  likes: 0,
 button:"Like",
 button2: "dislike"},
-  {name: "Sports win", button: "Like",
+  {name: "Sports win", likes: 0, button: "Like",
   button2: "dislike"},
-  {name: "New Invention",
+  {name: "New Invention", likes: 0,
   button: "Like",
 button2: "dislike"},
-  {name: "Covid news",
+  {name: "Covid news", likes: 0,
   button: "Like",
 button2: "dislike"},
-  {name: "European Affairs", button: "Like",
+  {name: "European Affairs", likes: 0, button: "Like",
   button2: "dislike"},
-  {name: "second Sports win", button: "Like",
+  {name: "second Sports win", likes: 0, button: "Like",
   button2: "dislike"}
 ];
 
@@ -108,6 +109,14 @@ const App = () => {
       });
   }
 
+  function increaseLikes() {
+    return Object.likes + 1;
+  }
+
+  function decreaseLikes () {
+    
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -124,16 +133,17 @@ const App = () => {
       </header>
 
       <body>
-      <h2 className = "Results-Titles">Todays Posts</h2>
+      <h2 className = "Results-Titles">Todays Top Posts</h2>
       <div>
         <ul className="Results-List">
             {filteredPosts.map((post => (
               <div className="Results-List">
               <li key={post.id}>{post.name}</li>
+              <li key={post.id}>Likes: {post.likes}</li>
               <li className="Like-Button" key={post.id}>{post.button}</li>
-                <img className= "Like-Button-Symbol" src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
+                <img className= "Like-Button-Symbol" onClick={increaseLikes} src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
               <li className="Dislike-Button" key={post.id}>{post.button2}</li>
-                <img className= "Dislike-Button-Symbol" src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
+                <img className= "Dislike-Button-Symbol" onClick={decreaseLikes} src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
               </div>
             )))}
         </ul>
