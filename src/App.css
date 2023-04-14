@@ -56,11 +56,18 @@
 
 .Results-List {
   list-style-type: none;
-  margin: 30px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.Results-Buttons {
+  list-style-type: none;
+  margin-left: 50px;
+  display: flex;
 }
 
 body li {
-  width: 100px;
+  width: 50px;
   height: 100px;
   display: grid;
   grid-template-rows: 10% 90%;
@@ -70,9 +77,48 @@ body li {
 }
 
 .Results-List li {
-  padding: 15px;
+  padding: 5px;
   border: 1px solid #457b7e;
-  width: 60%;
+  width: 200px;
+}
+
+.Results-Buttons li {
+  padding: 10px;
+  width: 225px;
+  height: 10px;
+  background-color: white;
+}
+
+.Like-Button {
+  background-color: green;
+  height: 20px;
+  vertical-align: middle;
+  font-size: 16px;
+  padding-bottom:10px;
+  font-weight:800;
+  cursor: pointer;
+}
+
+.Like-Button-Symbol {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.Dislike-Button {
+  background-color: red;
+  height: 20px;
+  vertical-align: middle;
+  font-size: 16px;
+  padding-bottom:10px;
+  font-weight:800;
+  cursor: pointer;
+}
+
+.Dislike-Button-Symbol {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
 }
 
 #memes{

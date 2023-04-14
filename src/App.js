@@ -5,10 +5,21 @@ import { useState } from "react";
 import Subreddits from './Components/subreddits';
 
 const posts = [
-  {id: 1,
-  name: example post 1}
-{id: 2,
-  name: second post}
+  {name: "Politics Story",
+button:"Like",
+button2: "dislike"},
+  {name: "Sports win", button: "Like",
+  button2: "dislike"},
+  {name: "New Invention",
+  button: "Like",
+button2: "dislike"},
+  {name: "Covid news",
+  button: "Like",
+button2: "dislike"},
+  {name: "European Affairs", button: "Like",
+  button2: "dislike"},
+  {name: "second Sports win", button: "Like",
+  button2: "dislike"}
 ];
 
 const filterPosts = (posts, query) => {
@@ -113,15 +124,23 @@ const App = () => {
       </header>
 
       <body>
-      <h2 className = "Results-Titles">Memes</h2>
-      <ul className="Results-List">
+      <h2 className = "Results-Titles">Todays Posts</h2>
       <div>
-      </div>
-          {filteredPosts.map((post => (
-            <li key={post.id}>{post.name}</li>
-          )))}
-       </ul> 
+        <ul className="Results-List">
+            {filteredPosts.map((post => (
+              <div className="Results-List">
+              <li key={post.id}>{post.name}</li>
+              <li className="Like-Button" key={post.id}>{post.button}</li>
+                <img className= "Like-Button-Symbol" src='https://cdn.worldvectorlogo.com/logos/thumbs-up-facebook.svg' alt="like thumbs up"></img>
+              <li className="Dislike-Button" key={post.id}>{post.button2}</li>
+                <img className= "Dislike-Button-Symbol" src='https://e7.pngegg.com/pngimages/637/974/png-clipart-social-media-facebook-messenger-security-hacker-blog-free-s-dislike-button-miscellaneous-user-profile-thumbnail.png' alt="dislike thumbs up"></img>
+              </div>
+            )))}
+        </ul>
+       </div>
+
        <div>
+       <h2 className = "Results-Titles">Memes</h2>
         {fetchFirstMemes()}
        </div>
        <div className="Subreddits">
